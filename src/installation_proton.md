@@ -5,7 +5,8 @@
 This will require an official version of Proton (downloadable from Steam (enable listing *Tools* in your Library/Games view) or from [Valve's official repository](https://github.com/ValveSoftware/Proton/releases)), or any unofficial Proton fork you wish to use (GloriousEggroll, tkg, etc.).  
 You will also need Wine and winetricks installed, please see Wine's or your Linux distro's documentation on installing these.  
 
-### **!!! The guide will follow Arch Linux procedures for installing packages, please adapt these instructions to your Linux distribution. !!!**
+> [!IMPORTANT]
+> The guide will follow Arch Linux procedures for installing packages, please adapt these instructions to your Linux distribution. 
 
 By default, Steam will place official Proton releases in `~/.local/share/Steam/steamapps/common`, and looks for unofficial forks in `~/.steam/steam/compatibilitytools.d`.  
 
@@ -45,7 +46,8 @@ Then, we run the launcher installer using Proton
 $ "$PROTON_DIR"/proton run BrickadiaInstaller.exe
 ```
 
-*The installer may seem to lock up after a minute while installing the VC2010 redistributable package.* If this is the case, simply Ctrl-C in your terminal and re-run the above command. It may take 2-3 attempts, but should eventually pull through and finish installing.  
+> [!NOTE]
+> The installer may seem to lock up after a minute while installing the VC2010 redistributable package. If this is the case, simply <kbd>Ctrl</kbd>-<kbd>C</kbd> in your terminal and re-run the above command. It may take 2-3 attempts, but should eventually pull through and finish installing.  
 
 Once the launcher installs, we need to re-install VC2010 manually *(author note: I don't know if the x64 version installed by the installer is damaged or if the x86 version is supposed to be installed alongside it. winetricks takes care of both situations.)*  
 
