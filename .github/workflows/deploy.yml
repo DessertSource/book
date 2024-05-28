@@ -34,6 +34,14 @@ jobs:
           crate: mdbook-image-size
           git: https://github.com/lhybdv/mdbook-image-size
 
+      - name: Install mdbook-catppuccin from git
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: mdbook-catppuccin
+          git: https://github.com/catppuccin/mdBook
+
+      - run: mdbook-catppuccin install
+
       - run: mdbook build
 
       - name: Deploy
