@@ -29,7 +29,7 @@ This is a *summary* of these tools, to view the full functionalities, **please r
 
 ## Tool Pie Menu
 
-<img src="../assets/chapter_2/tools/tool_wheel.png" alt="Edit game map tab"/>
+![Tool Wheel](../assets/chapter_2/tools/tool_wheel.png =x256)
 
 To equip a tool from the Tool Pie Menu, hold the <kbd>G</kbd> key to open the menu and hover over the tool you want. From there, release the <kbd>G</kbd> key.
 
@@ -49,5 +49,6 @@ To unequip the tool in your hand, open the tools pie by holding the <kbd>G</kbd>
 | Equip Hammer Tool  | <kbd>X</kbd>      |
 | Equip Resize Tool  | <kbd>M</kbd>      |
 
-> [!NOTE]
-> Selector, Applicator and Outliner do not have any keybindings by default.
+```admonish note
+Selector, Applicator and Outliner do not have any keybindings by default.
+```

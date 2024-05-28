@@ -4,7 +4,6 @@ There are currently a total of 4 maps in the game. You can select one of them fr
 
 <img src="../assets/chapter_1/maps/start_game_map.png" alt="Start a game map tab"/>
 
----
 ## Changing the Map While Playing
 
 ```admonish note
@@ -19,7 +18,6 @@ Any unsaved builds are lost if you change the map. Make sure to notify everyone 
 
 <img src="../assets/chapter_1/maps/edit_game_map.png" alt="Edit game map tab"/>
 
----
 ## List of Official Maps
 
 | Icon                                                          | Name   | First added     | Description                                                                               |

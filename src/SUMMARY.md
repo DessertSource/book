@@ -15,13 +15,6 @@
   - [Environment Settings]()
   - [Moderation Tools]()
 
-- [Customization]()
-  - [Options]()
-    - [General Options]()
-    - [Graphics Options]()
-    - [Audio Options]()
-  - [Controls]()
-
 - [Building](chapter_2/chapter_2.md)
   - [Tools](chapter_2/tools.md)
     - [Placer](chapter_2/tools/placer.md)
@@ -42,6 +35,18 @@
   - [Point Light](chapter_4/point_light.md)
   - [Audio](chapter_4/audio.md)
   - [Item Spawn](chapter_4/item_spawn.md)
+
+- [Social Features]()
+  - [Chat]()
+  - [Trust System]()
+  - [Emotes]()
+
+- [Customization]()
+  - [Options]()
+    - [General Options]()
+    - [Graphics Options]()
+    - [Audio Options]()
+  - [Controls]()
 
 # For Server Hosters
 - [Port Forwarding]()
