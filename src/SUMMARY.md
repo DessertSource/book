@@ -1,4 +1,4 @@
-# Summary
+# Introduction
 
 - [Brickadia](./brickadia.md)
 - [System Requirements](./system_requirements.md)

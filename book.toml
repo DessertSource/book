@@ -1,9 +1,10 @@
 [book]
-authors = ["ns"]
+authors = ["ns", "TheBlackParrot", "Pecon", "Sixmorphugus", "DessertSource", "maxymax13"]
 language = "en"
 multilingual = false
 src = "src"
 title = "Brickadia Manual"
 
-# mdbook-alerts plugin
-[preprocessor.alerts]
+# from mdbook-image-size
+[preprocessor.image-size]
+command = "mdbook-image-size"
