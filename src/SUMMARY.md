@@ -3,10 +3,10 @@
 - [Brickadia](./brickadia.md)
 - [System Requirements](./system_requirements.md)
 - [Installation](./installation.md)
-- [Getting Started](./getting_started)
+- [Getting Started]()
 
 # For Players
-- [Starting A Game](chapter_1/chapter_1.md)
+- [Starting A Game]()
   - [Maps](chapter_1/maps.md)
   - [Editing Your Game](chapter_1/server_editing.md)
       - [Game Info](chapter_1/server_editing/server_info.md)
