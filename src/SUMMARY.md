@@ -7,14 +7,14 @@
 
 # For Players
 - [Starting A Game](chapter_1/chapter_1.md)
-  - [Port Forwarding](chapter_1/port_forwarding.md)
   - [Maps](chapter_1/maps.md)
-  - [Editing Your Server](chapter_1/server_editing.md)
-      - [Server Info](chapter_1/server_editing/server_info.md)
-      - [Advanced Server Settings](chapter_1/server_editing/advanced_server_settings.md)
+  - [Editing Your Game](chapter_1/server_editing.md)
+      - [Game Info](chapter_1/server_editing/server_info.md)
+      - [Advanced Game Settings](chapter_1/server_editing/advanced_server_settings.md)
       - [Roles & Permissions](chapter_1/server_editing/roles.md)
   - [Environment Settings]()
   - [Moderation Tools]()
+
 - [Customization]()
   - [Options]()
     - [General Options]()
@@ -44,6 +44,7 @@
   - [Item Spawn](chapter_4/item_spawn.md)
 
 # For Server Hosters
+- [Port Forwarding]()
 - [Dedicated Servers]()
 
 # For Developers

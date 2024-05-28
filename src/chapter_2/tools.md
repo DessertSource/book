@@ -29,15 +29,15 @@ This is a *summary* of these tools, to view the full functionalities, **please r
 
 ## Tool Pie Menu
 
-<img src="../assets/chapter_2/tools/tool_wheel.png" alt="Edit game map tab" width="384"/>
+<img src="../assets/chapter_2/tools/tool_wheel.png" alt="Edit game map tab"/>
 
 To equip a tool from the Tool Pie Menu, hold the <kbd>G</kbd> key to open the menu and hover over the tool you want. From there, release the <kbd>G</kbd> key.
 
-[Tool Equipping](../assets/chapter_2/tools/tool_wheel_equip.gif)
+![Tool Equipping](../assets/chapter_2/tools/tool_wheel_equip.gif)
 
 To unequip the tool in your hand, open the tools pie by holding the <kbd>G</kbd> key and select the tool on your hand. A red highlight will appear. Release the <kbd>G</kbd> key.
 
-[Tool Unequipping](../assets/chapter_2/tools/tool_wheel_unequip.gif)
+![Tool Unequipping](../assets/chapter_2/tools/tool_wheel_unequip.gif)
 
 ## Default Keybindings
 
