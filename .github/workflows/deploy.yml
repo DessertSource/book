@@ -20,11 +20,13 @@ jobs:
         with:
           mdbook-version: '0.4.40'
 
-      - name: Install mdbook-alerts from git
+      - name: Install mdbook-admonish from git
         uses: baptiste0928/cargo-install@v3
         with:
-          crate: mdbook-alerts
-          git: https://github.com/lambdalisue/rs-mdbook-alerts
+          crate: mdbook-admonish
+          git: https://github.com/tommilligan/mdbook-admonish
+
+      - run: mdbook-admonish install ./
 
       - run: mdbook build
 
