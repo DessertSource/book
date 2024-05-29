@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "Brickadia Manual"
 
+[output.html]
+no-section-label = true
+
 # from mdbook-image-size
 [preprocessor.image-size]
 command = "mdbook-image-size"
