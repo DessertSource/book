@@ -2,10 +2,10 @@ Brickadia Manual
 
 # Introduction
 
-- [Brickadia](./brickadia.md)
-- [System Requirements](./system_requirements.md)
-- [Installation](./installation.md)
-- [Installation (Proton)](./installation_proton.md)
+- [Brickadia](brickadia/brickadia.md)
+- [System Requirements](system_requirements/system_requirements.md)
+- [Installation](installation/installation.md)
+- [Installation (Proton)](installation_proton/installation_proton.md)
 - [Getting Started]()
 
 ---
@@ -23,25 +23,25 @@ Brickadia Manual
 
 - [Building]()
   - [Tools](building/tools/tools.md)
-    - [Placer](building/tools/placer.md)
-    - [Painter](building/tools/painter.md)
-    - [Hammer](building/tools/hammer.md)
-    - [Resizer](building/tools/resizer.md)
-    - [Selector](building/tools/selector.md)
+    - [Placer](building/tools/placer/placer.md)
+    - [Painter](building/tools/painter/painter.md)
+    - [Hammer](building/tools/hammer/hammer.md)
+    - [Resizer](building/tools/resizer/resizer.md)
+    - [Selector](building/tools/selector/selector.md)
     - [Applicator](building/tools/applicator/applicator.md)
-    - [Outliner](building/tools/outliner.md)
+    - [Outliner](building/tools/outliner/outliner.md)
   - [Visual Guides](building/guides/guides.md)
 
-- [Quality Of Life Features](essentials/chapter_3.md)
-  - [Catalog](essentials/catalog.md)
-  - [Presets](essentials/presets.md)
-  - [Quickbar](essentials/quickbar.md)
+- [Quality Of Life Features](qol_features/qol_features.md)
+  - [Catalog](qol_features/catalog/catalog.md)
+  - [Presets](qol_features/presets/presets.md)
+  - [Quickbar](qol_features/quickbar/quickbar.md)
 
-- [Components](components/chapter_4.md)
-  - [Spot Light](components/spot_light.md)
-  - [Point Light](components/point_light.md)
-  - [Audio](components/audio.md)
-  - [Item Spawn](components/item_spawn.md)
+- [Components](components/components.md)
+  - [Spot Light](components/spot_light/spot_light.md)
+  - [Point Light](components/point_light/point_light.md)
+  - [Audio](components/audio/audio.md)
+  - [Item Spawn](components/item_spawn/item_spawn.md)
   - [Interact]()
 
 - [Minigames]()
@@ -76,4 +76,4 @@ Brickadia Manual
 
 # Other
 
-- [Users](./users.md)
+- [Users](users/users.md)

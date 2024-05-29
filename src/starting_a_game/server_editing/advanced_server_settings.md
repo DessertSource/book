@@ -1,3 +1,0 @@
-# Advanced Server Settings
-
-Placeholder
