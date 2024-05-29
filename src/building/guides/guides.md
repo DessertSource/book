@@ -11,7 +11,7 @@ The visual grid serves as a reference of alignment. It adapts to the current gri
 ```admonish tip
 Don't want the visual grid? Setting the transparency of the grid to 0% will turn it invisible.
 
-![Invisible grid settings](../assets/chapter_2/invisible_grid_settings.png)
+![Invisible grid settings](guides_invisible_grid_settings.png)
 ```
 
 ### Grid Size
