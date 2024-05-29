@@ -1,3 +1,5 @@
+Brickadia Manual
+
 # Introduction
 
 - [Brickadia](./brickadia.md)
