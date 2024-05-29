@@ -5,36 +5,40 @@
 - [Installation](./installation.md)
 - [Getting Started]()
 
+---
+
 # For Players
+
 - [Starting A Game]()
-  - [Maps](chapter_1/maps.md)
-  - [Editing Your Game](chapter_1/server_editing.md)
-      - [Game Info](chapter_1/server_editing/server_info.md)
-      - [Advanced Game Settings](chapter_1/server_editing/advanced_server_settings.md)
-      - [Roles & Permissions](chapter_1/server_editing/roles.md)
+  - [Maps](starting_a_game/maps.md)
+  - [Editing Your Game](starting_a_game/server_editing.md)
+      - [Game Info](starting_a_game/server_editing/server_info.md)
+      - [Advanced Game Settings](starting_a_game/server_editing/advanced_server_settings.md)
+      - [Roles & Permissions](starting_a_game/server_editing/roles.md)
   - [Environment Settings]()
   - [Moderation Tools]()
 
-- [Building](chapter_2/chapter_2.md)
-  - [Tools](chapter_2/tools.md)
-    - [Placer](chapter_2/tools/placer.md)
-    - [Painter](chapter_2/tools/painter.md)
-    - [Hammer](chapter_2/tools/hammer.md)
-    - [Resizer](chapter_2/tools/resizer.md)
-    - [Selector](chapter_2/tools/selector.md)
-    - [Applicator](chapter_2/tools/applicator.md)
-    - [Outliner](chapter_2/tools/outliner.md)
+- [Building]()
+  - [Tools](building/tools.md)
+    - [Placer](building/tools/placer.md)
+    - [Painter](building/tools/painter.md)
+    - [Hammer](building/tools/hammer.md)
+    - [Resizer](building/tools/resizer.md)
+    - [Selector](building/tools/selector.md)
+    - [Applicator](building/tools/applicator.md)
+    - [Outliner](building/tools/outliner.md)
+  - [Visual Guides](building/guides.md)
 
-- [Essential Features](chapter_3/chapter_3.md)
-  - [Catalog](chapter_3/catalog.md)
-  - [Presets](chapter_3/presets.md)
-  - [Quickbar](chapter_3/quickbar.md)
+- [Essential Features](essentials/chapter_3.md)
+  - [Catalog](essentials/catalog.md)
+  - [Presets](essentials/presets.md)
+  - [Quickbar](essentials/quickbar.md)
 
-- [Components](chapter_4/chapter_4.md)
-  - [Spot Light](chapter_4/spot_light.md)
-  - [Point Light](chapter_4/point_light.md)
-  - [Audio](chapter_4/audio.md)
-  - [Item Spawn](chapter_4/item_spawn.md)
+- [Components](components/chapter_4.md)
+  - [Spot Light](components/spot_light.md)
+  - [Point Light](components/point_light.md)
+  - [Audio](components/audio.md)
+  - [Item Spawn](components/item_spawn.md)
 
 - [Social Features]()
   - [Chat]()
@@ -48,11 +52,19 @@
     - [Audio Options]()
   - [Controls]()
 
+---
+
 # For Server Hosters
+
 - [Port Forwarding]()
 - [Dedicated Servers]()
 
+---
+
 # For Developers
 
+---
+
 # Other
+
 - [Users](./users.md)

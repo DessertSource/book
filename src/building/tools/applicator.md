@@ -1,21 +1,21 @@
 # Applicator
 
-![Applicator](../../assets/chapter_2/tools/applicator.png)
+![Applicator](../../assets/building/tools/applicator.png)
 
-The Applicator is a tool for applying components to bricks. The tool is compatible with [**Presets**](../../chapter_3/presets.md).
+The Applicator is a tool for applying components to bricks. The tool is compatible with [**Presets**](../../essentials/presets.md).
 
 The current default component list includes:
 
-- [Spot Light](../../chapter_4/spot_light.md)
-- [Point Light](../../chapter_4/point_light.md)
-- [Audio](../../chapter_4/audio.md)
-- [Item Spawn](../../chapter_4/item_spawn.md)
+- [Spot Light](../../components/spot_light.md)
+- [Point Light](../../components/point_light.md)
+- [Audio](../../components/audio.md)
+- [Item Spawn](../../components/item_spawn.md)
 
 ## Getting Started
 
 To get started, point at a brick of your choosing and left click with the Applicator tool equipped. The Applicator menu will appear.
 
-![Applicator Menu](../../assets/chapter_2/tools/applicator_menu.png)
+![Applicator Menu](../../assets/building/tools/applicator_menu.png)
 
 When outside the Applicator menu, you can <kbd>Ctrl</kbd><kbd>C</kbd> on a brick to copy its properties. Once you have done that, you can <kbd>Ctrl</kbd><kbd>V</kbd> to paste those properties on other bricks 
 
@@ -45,7 +45,7 @@ They can be toggled by clicking the head, gun or hand buttons in the Applicator 
 
 The Applicator can also let you view existing components of a brick outside the Applicator menu, as seen in the example below.
 
-![Applicator Menu](../../assets/chapter_2/tools/applicator_probe.png)
+![Applicator Menu](../../assets/building/tools/applicator_probe.png)
 
 ## Default Keybindings
 

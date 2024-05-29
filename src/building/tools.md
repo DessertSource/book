@@ -1,6 +1,9 @@
 # Building: Tools
+
+``` admonish summary
 In Brickadia, there are several types of tools you can use to enhance your building experience. Currently, there are a
-total of **7** building tools in the game. The most prominent ones are the *Placer*, *Painter* and *Hammer*.
+total of 7 building tools in the game. The most prominent ones are the Placer, Painter and Hammer.
+```
 
 ## List of Tools
 
@@ -29,15 +32,15 @@ This is a *summary* of these tools, to view the full functionalities, **please r
 
 ## Tool Pie Menu
 
-![Tool Wheel](../assets/chapter_2/tools/tool_wheel.png =x256)
+![Tool Wheel](../assets/building/tools/tool_wheel.png)
 
 To equip a tool from the Tool Pie Menu, hold the <kbd>G</kbd> key to open the menu and hover over the tool you want. From there, release the <kbd>G</kbd> key.
 
-![Tool Equipping](../assets/chapter_2/tools/tool_wheel_equip.gif)
+![Tool Equipping](../assets/building/tools/tool_wheel_equip.gif)
 
 To unequip the tool in your hand, open the tools pie by holding the <kbd>G</kbd> key and select the tool on your hand. A red highlight will appear. Release the <kbd>G</kbd> key.
 
-![Tool Unequipping](../assets/chapter_2/tools/tool_wheel_unequip.gif)
+![Tool Unequipping](../assets/building/tools/tool_wheel_unequip.gif)
 
 ## Default Keybindings
 
