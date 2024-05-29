@@ -5,6 +5,7 @@ Brickadia Manual
 - [Brickadia](./brickadia.md)
 - [System Requirements](./system_requirements.md)
 - [Installation](./installation.md)
+- [Installation (Proton)](./installation_proton.md)
 - [Getting Started]()
 
 ---
