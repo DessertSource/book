@@ -28,12 +28,6 @@ jobs:
 
       - run: mdbook-admonish install ./
 
-      - name: Install mdbook-image-size from git
-        uses: baptiste0928/cargo-install@v3
-        with:
-          crate: mdbook-image-size
-          git: https://github.com/lhybdv/mdbook-image-size
-
       - name: Install mdbook-catppuccin from git
         uses: baptiste0928/cargo-install@v3
         with:
