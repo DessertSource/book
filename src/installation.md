@@ -6,8 +6,9 @@ Brickadia has a launcher that will update the game for you, so you'll only need 
 
 Download the Windows installer from [the download page] and run it.
 
-> [!NOTE]
+``` admonish note
 > Windows SmartScreen may say that "Windows protected your PC" because the installer has not been run by enough users. To continue, click **More info**, then **Run anyway**.
+```
 
 If you do not have the **More info** option, you will need to adjust a setting:
 
