@@ -12,31 +12,31 @@ Brickadia Manual
 # Website Guide
 
 - [Your Account]()
+- [Server List]()
 
 # Player's Guide
 
 - [Main Menu](players/main_menu.md)
-- [Joining A Game](players/server_list.md)
-- [Managing A Game](players/server_management.md)
-  - [Maps](server_management/maps/maps.md)
+- [Joining a Game](players/joining_a_game.md)
+- [Starting a Game](players/starting_a_game.md)
+- [Maps](players/maps.md)
+- [Editing a Game](players/editing_a_game.md)
   - [Roles & Permissions]()
   - [Environment Settings]()
-  - [Moderation Tools]()
+- [Moderation Tools]()
 
-- [Quality Of Life Features](qol_features/qol_features.md)
-  - [Catalog](qol_features/catalog/catalog.md)
-  - [Presets](qol_features/presets/presets.md)
-  - [Quickbar](qol_features/quickbar/quickbar.md)
+- [Gameplay](players/gameplay.md)
+    - [Minigames]()
+      - [Sandbox]()
+      - [Bricktionary]()
+      - [Deathmatch]()
+    - [Catalog](players/gameplay/catalog.md)
+    - [Presets](players/gameplay/presets.md)
+    - [Quickbar](players/gameplay/quickbar.md)
 
-- [Minigames]()
-  - [Sandbox]()
-  - [Bricktionary]()
-  - [Deathmatch]()
-
-- [Social Features]()
-  - [Chat]()
-  - [Trust System]()
-  - [Emotes]()
+- [Chat]()
+- [Trust System]()
+- [Emotes]()
 
 - [Customization]()
   - [Avatars]()
@@ -59,11 +59,11 @@ Brickadia Manual
   - [Applicator](builders/tools/applicator/applicator.md)
   - [Outliner](builders/tools/outliner/outliner.md)
 - [Visual Guides](builders/guides/guides.md)
-- [Components](components/components.md)
-  - [Spot Light](components/spot_light/spot_light.md)
-  - [Point Light](components/point_light/point_light.md)
-  - [Audio](components/audio/audio.md)
-  - [Item Spawn](components/item_spawn/item_spawn.md)
+- [Components](builders/components/components.md)
+  - [Spot Light](builders/components/spot_light/spot_light.md)
+  - [Point Light](builders/components/point_light/point_light.md)
+  - [Audio](builders/components/audio/audio.md)
+  - [Item Spawn](builders/components/item_spawn/item_spawn.md)
   - [Interact]()
 
 ---

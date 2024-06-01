@@ -1,33 +1,29 @@
 # Main Menu
 
-**The Main Menu is central to everything that you want to do inside Brickadia.**
+![main_menu.png](../assets/players/main_menu/main_menu.png)
 
-On the top right corner, you will see your own Brickadia user name. From there, you can log out of your current account and log in with a different account.
+The main menu is central to the Brickadia experience.
 
-This is where you see blogs for the game. The Brickadia blog is known for updates and developer logs which document the progress of the game.
+The feed on the right displays the newest Brickadia blog articles. The Brickadia blog is known for game updates and developer logs which document the progress of the game.
 
-![main_menu.png](main_menu.png)
+You can log out and change your account here or check out the links below the feed.
 
-[Join A Game](server_list)
+**A summary of menu items on the left:**
 
-: Browse current servers from a list and join them.
+[Join A Game](joining_a_game.md)
+: Browse servers from a list and join them.
 
-[Start A Game](server_management.md)
-
+[Start A Game](editing_a_game)
 : Play in single player or start your own server, complete with its own settings. **(Requires [port forwarding]())**.
 
 [Edit Avatar]()
-
 : Customize the look and colors of your avatar.
 
 [Options]()
-
 : Adjust general preferences, controls, sounds and graphics settings.
 
 About
-
 : Credits for Brickadia, including developers, contributors and software licenses.
 
 Quit
-
-: Quits the game, of course.
+: Quits the game.

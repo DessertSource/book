@@ -16,7 +16,7 @@ This is the menu for the paint tool.
 
 ## Colors and Materials
 
-The colors that you are able to paint with can be changed in the [Server Settings]() using a palette [Preset](../../../qol_features/presets/presets.md).
+The colors that you are able to paint with can be changed in the [Server Settings]() using a palette [Preset](../../../players/gameplay/presets.md).
 
 Available materials include:
 - Plastic (no slider)

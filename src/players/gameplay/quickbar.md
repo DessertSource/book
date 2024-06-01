@@ -4,7 +4,7 @@ The Quickbar is where you equip your current brick or item.
 
 ## How to use the Quickbar
 
-To add an item to your Quickbar, browse the [Catalog](../catalog/catalog.md) and from there, click any item you want to put it in the Quickbar.
+To add an item to your Quickbar, browse the [Catalog](catalog.md) and from there, click any item you want to put it in the Quickbar.
 
 To remove an item from your Quickbar, right-click the item in the Quickbar.
 
@@ -12,11 +12,11 @@ To switch the Quickbar mode in gameplay, press <kbd>Ctrl</kbd><kbd>Q</kbd> to sw
 
 The quick bar in brick mode:
 
-![Brick Quickbar](brick_quickbar.png)
+![Brick Quickbar](../../assets/players/gameplay/quickbar/brick_quickbar.png)
 
 The Quickbar in item mode:
 
-![Item Quickbar](item_quickbar.png)
+![Item Quickbar](../../assets/players/gameplay/quickbar/item_quickbar.png)
 
 This can be configured through [Minigames]().
 

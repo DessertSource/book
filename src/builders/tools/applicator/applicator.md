@@ -2,14 +2,14 @@
 
 ![Applicator](applicator.png)
 
-The Applicator is a tool for applying [Components]() to bricks. The tool is compatible with [Presets](../../../qol_features/presets/presets.md).
+The Applicator is a tool for applying [Components]() to bricks. The tool is compatible with [Presets](../../../players/gameplay/presets.md).
 
 The current default component list includes:
 
-- [Spot Light](../../../components/spot_light/spot_light.md)
-- [Point Light](../../../components/point_light/point_light.md)
-- [Audio](../../../components/audio/audio.md)
-- [Item Spawn](../../../components/item_spawn/item_spawn.md)
+- [Spot Light](../../components/spot_light/spot_light.md)
+- [Point Light](../../components/point_light/point_light.md)
+- [Audio](../../components/audio/audio.md)
+- [Item Spawn](../../components/item_spawn/item_spawn.md)
 
 ## Getting Started
 
