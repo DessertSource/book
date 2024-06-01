@@ -16,7 +16,7 @@ Brickadia Manual
 # Player's Guide
 
 - [Main Menu](players/main_menu.md)
-- [Joining A Game](players/server_list)
+- [Joining A Game](players/server_list.md)
 - [Managing A Game](players/server_management.md)
   - [Maps](server_management/maps/maps.md)
   - [Roles & Permissions]()
