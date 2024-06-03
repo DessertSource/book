@@ -13,3 +13,7 @@ edit-url-template = "https://github.com/DessertSource/book/edit/main/{path}"
 [output.html.fold]
 enable = true
 level = 4
+
+# from mdbook-image-size
+[preprocessor.image-size]
+command = "mdbook-image-size"
