@@ -6,19 +6,17 @@ The game supports Nvidia's DLSS upscaling - which means you can render the game 
 
 Apple macOS and ARM processors are not officially supported at this point in time.
 
-## Windows
+## Windows - Client
 
 ### Minimum
 
 * 64-bit x86 processor
 * DirectX version 11 capable integrated GPU / dedicated graphics card
-* 6 GB of system RAM (not including graphics card vRAM)
+* 8 GB of system RAM (not including graphics card VRAM)
 * Windows 10 or later versions
 * 2GB of free disk space
 
 ### Recommended
-
-***Provisional specifications.**
 
 * 6 core processor or better
 * **Graphics cards:**
@@ -26,8 +24,16 @@ Apple macOS and ARM processors are not officially supported at this point in tim
   * **AMD:** RX 6000 series graphics card or better
   * **Intel:** Arc series graphics card or better
 * 16 GB of system RAM or more
-* 4 GB of GPU vRAM or more
+* 4 GB of GPU VRAM or more
 
-## Linux
+## Windows - Server
+
+**To be added.**
+
+## Linux - Client
+
+**To be added.**
+
+## Linux - Server
 
 **To be added.**

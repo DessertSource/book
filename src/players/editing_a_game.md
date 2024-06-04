@@ -8,7 +8,7 @@ This menu can be accessed from the Pause menu.
 The *Save* button applies all settings at once, including your map, advanced settings and permission changes. 
 ```
 ``` admonish quote title="Applying server settings", collapsible=true
-1. Press <kbd>Esc</kbd> to open the Pause Menu.
+1. Press <kbd>Esc</kbd> to open the [Pause Menu]().
 2. Click _Edit Game_
 3. Change selected map, advanced settings and permissions as needed.
 4. Check all your settings, including selected map.
@@ -38,6 +38,8 @@ Any unsaved builds are lost if you change the map.
 ```
 
 ## Advanced Settings
+
+**Requires a role with the following permission: [Edit Server Settings]()**
 
 ### In-Game
 

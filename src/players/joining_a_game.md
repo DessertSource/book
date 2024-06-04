@@ -14,20 +14,16 @@ Below are the icons that can appear next to a server's name.
 * ![server_list_dedicated.png](../assets/players/joining_a_game/dedicated.png) **Dedicated server:** This server will stay on even without players. Usually, they are considered running 24/7. See [Dedicated Servers]() for more information.
 * ![server_list_passworded.png](../assets/players/joining_a_game/passworded.png) **Passworded server:** Requires a password, which is given at the discretion of the owner and can be changed at any time without notification.
 
-``` admonish quote title="Joining a server", collapsible=true
-Do one of the following:
+### Manual Connect
 
-* Double-click the server to join.
-* Select the server, and press the _Join Game_ button.
-```
-
-``` admonish quote title="Manually connecting to a server", collapsible=true
 1. Click _Manual Connect_ on the top right of your screen.
 2. Enter the server's IP and password. Leave password blank if the server has no password.
 3. Click _Join Game_.
-```
 
-``` admonish quote title="Viewing individual players in a server", collapsible=true
+### Viewing Players
+
 Click _View Players_.
+
+``` admonish note
 **To respect account privacy settings, some player names are hidden.**
 ```

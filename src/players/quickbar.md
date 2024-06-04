@@ -12,11 +12,11 @@ To switch the Quickbar mode in gameplay, press <kbd>Ctrl</kbd><kbd>Q</kbd> to sw
 
 The quick bar in brick mode:
 
-![Brick Quickbar](../../assets/players/gameplay/quickbar/brick_quickbar.png)
+![Brick Quickbar](../assets/players/quickbar/brick_quickbar.png)
 
 The Quickbar in item mode:
 
-![Item Quickbar](../../assets/players/gameplay/quickbar/item_quickbar.png)
+![Item Quickbar](../assets/players/quickbar/item_quickbar.png)
 
 This can be configured through [Minigames]().
 

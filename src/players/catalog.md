@@ -10,9 +10,9 @@ Currently, you are able to browse:
 
 To access the Catalog, simply press <kbd>B</kbd>. You can switch between bricks and weapons on the top bar.
 
-![Catalog with Bricks](../../assets/players/gameplay/catalog/catalog_bricks.png)
+![Catalog with Bricks](../assets/players/catalog/catalog_bricks.png)
 
-![Catalog with Items](../../assets/players/gameplay/catalog/catalog_items.png)
+![Catalog with Items](../assets/players/catalog/catalog_items.png)
 
 To get an item from the Catalog, simply click one of the items you want *or* click and drag the item to the [Quickbar](quickbar.md). This will put it in the Quickbar.
 

@@ -2,7 +2,7 @@
 
 ![Applicator](applicator.png)
 
-The Applicator is a tool for applying [Components]() to bricks. The tool is compatible with [Presets](../../../players/gameplay/presets.md).
+The Applicator is a tool for applying [Components]() to bricks. The tool is compatible with [Presets](../../../players/presets.md).
 
 The current default component list includes:
 

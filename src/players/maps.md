@@ -11,7 +11,7 @@ Label your [Presets]() according to the map name. This makes them easier to find
 ## List of Official Maps
 
 | Icon                                                                             | Name   | First added     | Description                                                                               |
-|:---------------------------------------------------------------------------------|:-------|:----------------|-------------------------------------------------------------------------------------------|
+|:---------------------------------------------------------------------------------|:-------|:----------------|:------------------------------------------------------------------------------------------|
 | <img src="../assets/players/maps/maps_plate.webp" width=192px alt="Plate icon">  | Plate  | Initial release | A completely flat map with endless options for customisation. Build without distractions! |
 | <img src="../assets/players/maps/maps_studio.png" width=192px alt="Studio icon"> | Studio | Alpha 4         | A cosy summer home with carefully hidden secrets, and many places to build in.            |
 | <img src="../assets/players/maps/maps_peaks.png" width=192px alt="Peaks icon">   | Peaks  | Alpha 4         | A large, vast & snowy mountain range with icy lakes and waters just over the horizon.     |
