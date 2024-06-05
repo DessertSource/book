@@ -1,0 +1,856 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Brickadia Manual</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-admonish.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="brickadia.html">Brickadia</a></li><li class="chapter-item expanded "><a href="system_requirements.html">System Requirements</a></li><li class="chapter-item expanded "><a href="installation.html">Installation</a></li><li class="chapter-item expanded "><a href="installation_proton.html">Installation (Proton)</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Website Guide</li><li class="chapter-item expanded "><div>Your Account</div></li><li class="chapter-item expanded "><div>Server List</div></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Player's Guide</li><li class="chapter-item expanded "><a href="players/main_menu.html">Main Menu</a></li><li class="chapter-item expanded "><a href="players/joining_a_game.html">Joining a Game</a></li><li class="chapter-item expanded "><a href="players/starting_a_game.html">Starting a Game</a></li><li class="chapter-item expanded "><a href="players/maps.html">Maps</a></li><li class="chapter-item expanded "><a href="players/editing_a_game.html">Editing a Game</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="players/roles.html">Roles & Permissions</a></li><li class="chapter-item expanded "><div>Environment Settings</div></li></ol></li><li class="chapter-item expanded "><div>Moderation Tools</div></li><li class="chapter-item expanded "><a href="players/catalog.html">Catalog</a></li><li class="chapter-item expanded "><a href="players/presets.html">Presets</a></li><li class="chapter-item expanded "><a href="players/quickbar.html">Quickbar</a></li><li class="chapter-item expanded "><div>Chat</div></li><li class="chapter-item expanded "><div>Trust System</div></li><li class="chapter-item expanded "><div>Emotes</div></li><li class="chapter-item expanded "><div>Customization</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Avatars</div></li><li class="chapter-item expanded "><div>Options</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>General Options</div></li><li class="chapter-item expanded "><div>Graphics Options</div></li><li class="chapter-item expanded "><div>Audio Options</div></li></ol></li><li class="chapter-item expanded "><div>Controls</div></li></ol></li><li class="chapter-item expanded "><div>Building</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="builders/tools/tools.html">Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="builders/tools/placer/placer.html">Placer</a></li><li class="chapter-item expanded "><a href="builders/tools/painter/painter.html">Painter</a></li><li class="chapter-item expanded "><a href="builders/tools/hammer/hammer.html">Hammer</a></li><li class="chapter-item expanded "><a href="builders/tools/resizer/resizer.html">Resizer</a></li><li class="chapter-item expanded "><a href="builders/tools/selector/selector.html">Selector</a></li><li class="chapter-item expanded "><a href="builders/tools/applicator/applicator.html">Applicator</a></li><li class="chapter-item expanded "><a href="builders/tools/outliner/outliner.html">Outliner</a></li></ol></li><li class="chapter-item expanded "><a href="builders/guides/guides.html">Visual Guides</a></li></ol></li><li class="chapter-item expanded "><a href="builders/components/components.html">Components</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="builders/components/spot_light/spot_light.html">Spot Light</a></li><li class="chapter-item expanded "><a href="builders/components/point_light/point_light.html">Point Light</a></li><li class="chapter-item expanded "><a href="builders/components/audio/audio.html">Audio</a></li><li class="chapter-item expanded "><a href="builders/components/item_spawn/item_spawn.html">Item Spawn</a></li><li class="chapter-item expanded "><div>Interact</div></li></ol></li><li class="chapter-item expanded "><div>Minigames</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><div>Sandbox</div></li><li class="chapter-item expanded "><div>Bricktionary</div></li><li class="chapter-item expanded "><div>Deathmatch</div></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Server Host's Guide</li><li class="chapter-item expanded "><div>Port Forwarding</div></li><li class="chapter-item expanded "><div>Dedicated Servers</div></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Developer's Guide</li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Other</li><li class="chapter-item expanded "><a href="users/users.html">Users</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Brickadia Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/DessertSource/book/tree/main" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="brickadia"><a class="header" href="#brickadia">Brickadia</a></h1>
+<p><img src="brickadia_logo.webp" alt="brickadia_logo.webp" /></p>
+<p><strong><a href="https://brickadia.com">Brickadia</a></strong> is a multiplayer brick building game designed to handle massive constructions, with creative online gameplay.</p>
+<p>This manual aims to teach you just about everything you need to know. It is open source, and you can <a href="https://github.com/brickadia/book">contribute on GitHub</a> if you find that it doesn't.</p>
+<h2 id="community"><a class="header" href="#community">Community</a></h2>
+<ul>
+<li><a href="https://brickadia.com/">Website</a></li>
+<li><a href="https://discord.gg/brickadia">Discord</a></li>
+<li><a href="https://www.tiktok.com/@brickadiagame">TikTok</a></li>
+<li><a href="https://youtube.com/@brickadia">YouTube</a></li>
+<li><a href="https://x.com/brickadiagame">X / Twitter</a></li>
+<li><a href="https://www.instagram.com/brickadiagame/">Instagram</a></li>
+<li><a href="https://bsky.app/profile/brickadia.com">Bluesky</a></li>
+<li><a href="https://reddit.com/r/brickadia">Reddit (r/brickadia)</a></li>
+</ul>
+<h2 id="game-version"><a class="header" href="#game-version">Game Version</a></h2>
+<p>This manual is written for <a href="https://brickadia.com/blog/brickadia-alpha-5-patch-6/">Brickadia version CL7870 (Alpha 5 Patch 6)</a>, released on April 17, 2022.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-requirements"><a class="header" href="#system-requirements">System Requirements</a></h1>
+<p>Brickadia's requirements are only a rough estimate of what your real-world performance would be like on the game itself. Therefore, you won't always be able to run Brickadia on every server. Different servers call for varying levels of hardware performance.</p>
+<p>The game supports Nvidia's DLSS upscaling - which means you can render the game at much less performance cost, the main trade-off being the image quality compared to native resolution.</p>
+<p>Apple macOS and ARM processors are not officially supported at this point in time.</p>
+<h2 id="windows---client"><a class="header" href="#windows---client">Windows - Client</a></h2>
+<h3 id="minimum"><a class="header" href="#minimum">Minimum</a></h3>
+<ul>
+<li>64-bit x86 processor</li>
+<li>DirectX version 11 capable integrated GPU / dedicated graphics card</li>
+<li>8 GB of system RAM (not including graphics card VRAM)</li>
+<li>Windows 10 or later versions</li>
+<li>2GB of free disk space</li>
+</ul>
+<h3 id="recommended"><a class="header" href="#recommended">Recommended</a></h3>
+<ul>
+<li>6 core processor or better</li>
+<li><strong>Graphics cards:</strong>
+<ul>
+<li><strong>Nvidia</strong>: RTX 30 series graphics card or better</li>
+<li><strong>AMD:</strong> RX 6000 series graphics card or better</li>
+<li><strong>Intel:</strong> Arc series graphics card or better</li>
+</ul>
+</li>
+<li>16 GB of system RAM or more</li>
+<li>4 GB of GPU VRAM or more</li>
+</ul>
+<h2 id="windows---server"><a class="header" href="#windows---server">Windows - Server</a></h2>
+<p><strong>To be added.</strong></p>
+<h2 id="linux---client"><a class="header" href="#linux---client">Linux - Client</a></h2>
+<p><strong>To be added.</strong></p>
+<h2 id="linux---server"><a class="header" href="#linux---server">Linux - Server</a></h2>
+<p><strong>To be added.</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<p>Brickadia has a launcher that will update the game for you, so you'll only need to install it once.</p>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>Download the Windows installer from <a href="https://brickadia.com/download">the download page</a> and run it.</p>
+<pre><code class="language-admonish note">Windows SmartScreen may say that "Windows protected your PC" because the installer has not been run by enough users. To continue, click **More info**, then **Run anyway**.
+</code></pre>
+<p>If you do not have the <strong>More info</strong> option, you will need to adjust a setting:</p>
+<ol>
+<li>Open the Windows Defender settings</li>
+<li>Go to <strong>App &amp; browser control</strong></li>
+<li>Under <em>Check apps and files</em>, select the <strong>Warn</strong> option instead of the <strong>Block</strong> option</li>
+<li>Run the installer again</li>
+</ol>
+<p>You'll get a shortcut to start Brickadia on your desktop, and several others in your start menu.</p>
+<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<pre><code class="language-admonish warning">The Vulkan renderer in the game is known to be unstable in its current state. If you're experiencing random bouts of crashing, you may want to [try running the game in Proton](./installation_proton.md).*
+</code></pre>
+<p>Brickadia can be started from application entries.</p>
+<h3 id="debianubuntu"><a class="header" href="#debianubuntu">Debian/Ubuntu</a></h3>
+<p>Download the <code>brickadia-launcher.deb</code> package from <a href="https://brickadia.com/download">the download page</a>.</p>
+<p>On most distributions, you should be able to open it to install it. If not, run this command:</p>
+<pre><code class="language-bash">sudo apt install ~/Downloads/brickadia-launcher.deb
+</code></pre>
+<h3 id="arch-linux"><a class="header" href="#arch-linux">Arch Linux</a></h3>
+<p>Install <a href="https://aur.archlinux.org/packages/brickadia-launcher/"><code>brickadia-launcher</code></a> from the <a href="https://wiki.archlinux.org/title/AUR">AUR</a>.</p>
+<h3 id="other"><a class="header" href="#other">Other</a></h3>
+<p>An official package is not available for any other distributions yet, but you can download an archive of the launcher that should work on most Linux distributions, provided that you find the dependencies.</p>
+<p>Download the <code>brickadia-launcher.tar.xz</code> archive from <a href="https://brickadia.com/download">the download page</a>. Extract it, and run the <code>brickadia-launcher</code> file to start the game.</p>
+<p>The following is a list of dependencies based on the Debian package. The exact names may vary slightly by distro.</p>
+<pre><code>libbsd0
+libc6
+libcom-err2
+libdbus-1-3
+libexpat1
+libfontconfig1
+libfreetype6
+libgcc1
+libgcrypt20
+libgl1
+libglib2.0-0
+libglvnd0
+libglx0
+libgpg-error0
+libgssapi-krb5-2
+libk5crypto3
+libkeyutils1
+libkrb5-3
+libkrb5support0
+liblz4-1
+liblzma5
+libpcre3
+libpng16-16
+libstdc++6
+libsystemd0
+libx11-6
+libx11-xcb1
+libxau6
+libxcb-icccm4
+libxcb-image0
+libxcb-keysyms1
+libxcb-randr0
+libxcb-render-util0
+libxcb-render0
+libxcb-shape0
+libxcb-shm0
+libxcb-sync1
+libxcb-util0 or libxcb-util1
+libxcb-xfixes0
+libxcb-xinerama0
+libxcb-xkb1
+libxcb1
+libxdmcp6
+libxext6
+libxkbcommon-x11-0
+libxkbcommon0
+zlib1g
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installing-brickadia-for-use-with-proton"><a class="header" href="#installing-brickadia-for-use-with-proton">Installing Brickadia for use with Proton</a></h1>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<p>This will require an official version of Proton (downloadable from Steam (enable listing <em>Tools</em> in your Library/Games view) or from <a href="https://github.com/ValveSoftware/Proton/releases">Valve's official repository</a>), or any unofficial Proton fork you wish to use (GloriousEggroll, tkg, etc.).<br />
+You will also need Wine and winetricks installed, please see Wine's or your Linux distro's documentation on installing these.</p>
+<pre><code class="language-admonish note">The guide will follow Arch Linux procedures for installing packages, please adapt these instructions to your Linux distribution. 
+</code></pre>
+<p>By default, Steam will place official Proton releases in <code>~/.local/share/Steam/steamapps/common</code>, and looks for unofficial forks in <code>~/.steam/steam/compatibilitytools.d</code>.</p>
+<p>Commands denoted with a <code>#</code> will require root, those denoted with <code>$</code> will be run as a normal user. <code>sudo</code> can be used to request root-level access on a per-command basis.</p>
+<h3 id="setting-things-up"><a class="header" href="#setting-things-up">Setting things up</a></h3>
+<p>First, we need to install the prerequisite packages:</p>
+<ul>
+<li>wine</li>
+<li>winetricks</li>
+<li>curl</li>
+<li>steam <em>(optional)</em></li>
+</ul>
+<p>The <code>multilib</code> repository must be enabled for <code>wine</code>, <code>winetricks</code>, and optionally <code>steam</code>. Enable this in <code>/etc/pacman.conf</code>.*</p>
+<pre><code># pacman -S wine winetricks
+</code></pre>
+<p>To keep things tidy, we need to create a folder for Brickadia to reside in, as well as the directory Proton needs to store its data.</p>
+<pre><code>$ mkdir -p ~/Games/Brickadia; cd ~/Games/Brickadia
+</code></pre>
+<p>Now we download the Brickadia launcher's installer</p>
+<pre><code>$ curl -o BrickadiaInstaller.exe "https://static.brickadia.com/launcher/1.4/BrickadiaInstaller.exe"
+</code></pre>
+<h3 id="installing-the-launcher"><a class="header" href="#installing-the-launcher">Installing the launcher</a></h3>
+<p>We first need to set an environment variable so that Proton knows where to store data. To make life a little easier for us, we'll also set where we have Proton installed.</p>
+<pre><code>$ export STEAM_COMPAT_DATA_PATH=$HOME/Games/Brickadia
+$ export PROTON_DIR=$HOME/.local/share/Steam/steamapps/common/Proton\ 5.0
+</code></pre>
+<p>Then, we run the launcher installer using Proton</p>
+<pre><code>$ "$PROTON_DIR"/proton run BrickadiaInstaller.exe
+</code></pre>
+<pre><code class="language-admonish note">The installer may seem to lock up after a minute while installing the VC2010 redistributable package. If this is the case, simply &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;C&lt;/kbd&gt; in your terminal and re-run the above command. It may take 2-3 attempts, but should eventually pull through and finish installing.  
+</code></pre>
+<p>Once the launcher installs, we need to re-install VC2010 manually <em>(author note: I don't know if the x64 version installed by the installer is damaged or if the x86 version is supposed to be installed alongside it. winetricks takes care of both situations.)</em></p>
+<p>Ignore any warnings that appear in the terminal, these are normal. Choose the repair option for the x64 installer.</p>
+<pre><code>$ WINEPREFIX=$STEAM_COMPAT_DATA_PATH/pfx winetricks vcrun2010
+</code></pre>
+<h3 id="running-the-game"><a class="header" href="#running-the-game">Running the game</a></h3>
+<p>After the launcher is installed and VC2010 is manually re-installed, the launcher should now be able to download the game's files and launch.<br />
+To make things easier, we'll put the directory the launcher was installed to in an environment variable.</p>
+<pre><code>$ export LAUNCHER_DIR=$STEAM_COMPAT_DATA_PATH/pfx/drive_c/Program\ Files/Brickadia/BrickadiaLauncher
+</code></pre>
+<p>Now we launch!</p>
+<pre><code>$ "$PROTON_DIR"/proton run "$LAUNCHER_DIR"/BrickadiaLauncher.exe
+</code></pre>
+<h1 id="scripts-for-one-click-installingrunning"><a class="header" href="#scripts-for-one-click-installingrunning">Scripts for one-click installing/running</a></h1>
+<p>Place these in the <code>~/Games/Brickadia</code> folder you created in the beginning of the guide:
+https://gist.github.com/TheBlackParrot/280b9f86dcc41085f9213b9ef75dcf55</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="main-menu"><a class="header" href="#main-menu">Main Menu</a></h1>
+<p><img src="players/../assets/players/main_menu/main_menu.png" alt="main_menu.png" /></p>
+<p>The main menu is central to the Brickadia experience.</p>
+<p>The feed on the right displays the newest Brickadia blog articles. The Brickadia blog is known for game updates and developer logs which document the progress of the game.</p>
+<p>You can log out and change your account here or check out the links below the feed.</p>
+<p><strong>A summary of menu items on the left:</strong></p>
+<p><a href="players/joining_a_game.html">Join A Game</a>
+: Browse servers from a list and join them.</p>
+<p><a href="players/editing_a_game">Start A Game</a>
+: Play in single player or start your own server, complete with its own settings. <strong>(Requires <a href="players/">port forwarding</a>)</strong>.</p>
+<p><a href="players/">Edit Avatar</a>
+: Customize the look and colors of your avatar.</p>
+<p><a href="players/">Options</a>
+: Adjust general preferences, controls, sounds and graphics settings.</p>
+<p>About
+: Credits for Brickadia, including developers, contributors and software licenses.</p>
+<p>Quit
+: Quits the game.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="joining-a-game"><a class="header" href="#joining-a-game">Joining A Game</a></h1>
+<p>In this menu, you have a searchable server list, feature complete with server names, hoster name, descriptions  and common server statistics like active players, visits, overall brick count and map.</p>
+<p>To get started with playing online for the first time, simply pick a server and click <em>Join Game</em>.</p>
+<pre><code class="language-admonish note">Unlisted servers will not appear in this menu.
+</code></pre>
+<p><img src="players/../assets/players/joining_a_game/server_list.png" alt="join_game_menu.png" /></p>
+<p>Below are the icons that can appear next to a server's name.</p>
+<ul>
+<li><img src="players/../assets/players/joining_a_game/dedicated.png" alt="server_list_dedicated.png" /> <strong>Dedicated server:</strong> This server will stay on even without players. Usually, they are considered running 24/7. See <a href="players/">Dedicated Servers</a> for more information.</li>
+<li><img src="players/../assets/players/joining_a_game/passworded.png" alt="server_list_passworded.png" /> <strong>Passworded server:</strong> Requires a password, which is given at the discretion of the owner and can be changed at any time without notification.</li>
+</ul>
+<h3 id="manual-connect"><a class="header" href="#manual-connect">Manual Connect</a></h3>
+<ol>
+<li>Click <em>Manual Connect</em> on the top right of your screen.</li>
+<li>Enter the server's IP and password. Leave password blank if the server has no password.</li>
+<li>Click <em>Join Game</em>.</li>
+</ol>
+<h3 id="viewing-players"><a class="header" href="#viewing-players">Viewing Players</a></h3>
+<p>Click <em>View Players</em>.</p>
+<pre><code class="language-admonish note">**To respect account privacy settings, some player names are hidden.**
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="maps"><a class="header" href="#maps">Maps</a></h1>
+<p>There are currently a total of 4 maps in the game. You can select one of them from the "Start A Game" menu, or the "Edit Game" menu. Each map has different settings that may not be interchangeable with other maps at all.</p>
+<pre><code class="language-admonish tip">Label your [Presets]() according to the map name. This makes them easier to find when loading map presets.
+</code></pre>
+<p><img src="players/../assets/players/maps/maps_start_game.png" alt="Start A Game" /></p>
+<h2 id="list-of-official-maps"><a class="header" href="#list-of-official-maps">List of Official Maps</a></h2>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Icon</th><th style="text-align: left">Name</th><th style="text-align: left">First added</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left"><img src="players/../assets/players/maps/maps_plate.webp" width=192px alt="Plate icon"></td><td style="text-align: left">Plate</td><td style="text-align: left">Initial release</td><td style="text-align: left">A completely flat map with endless options for customisation. Build without distractions!</td></tr>
+<tr><td style="text-align: left"><img src="players/../assets/players/maps/maps_studio.png" width=192px alt="Studio icon"></td><td style="text-align: left">Studio</td><td style="text-align: left">Alpha 4</td><td style="text-align: left">A cosy summer home with carefully hidden secrets, and many places to build in.</td></tr>
+<tr><td style="text-align: left"><img src="players/../assets/players/maps/maps_peaks.png" width=192px alt="Peaks icon"></td><td style="text-align: left">Peaks</td><td style="text-align: left">Alpha 4</td><td style="text-align: left">A large, vast &amp; snowy mountain range with icy lakes and waters just over the horizon.</td></tr>
+<tr><td style="text-align: left"><img src="players/../assets/players/maps/maps_space.webp" width=192px alt="Space icon"></td><td style="text-align: left">Space</td><td style="text-align: left">Alpha 5 Patch 5</td><td style="text-align: left">The vast emptiness of space awaits you. Oh, and fancy nebulae!</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="edit-game"><a class="header" href="#edit-game">Edit Game</a></h1>
+<p><strong>Not to be confused with <a href="players/starting_a_game.html"><em>Start a Game</em></a>.</strong></p>
+<p>This menu can be accessed from the Pause menu.</p>
+<pre><code class="language-admonish note">The *Save* button applies all settings at once, including your map, advanced settings and permission changes. 
+</code></pre>
+<pre><code class="language-admonish quote title=&quot;Applying server settings&quot;  collapsible=true">1. Press &lt;kbd&gt;Esc&lt;/kbd&gt; to open the [Pause Menu]().
+2. Click _Edit Game_
+3. Change selected map, advanced settings and permissions as needed.
+4. Check all your settings, including selected map.
+5. Finalize all settings by clicking the _Save_ button.
+</code></pre>
+<p><img src="players/../assets/players/editing_a_game/edit_game_menu.gif" alt="Edit Game Menu" /></p>
+<h2 id="server-info"><a class="header" href="#server-info">Server Info</a></h2>
+<p><strong>Requires a role with the following permission: <a href="players/">Edit Server Settings</a></strong></p>
+<p>The panel on the right serves as a quick way to customize your server's name, description, password and player limit.  It also displays your current map as a thumbnail.</p>
+<p>The maximum player limit is currently restricted to 30 due to known server performance issues beyond this limit.</p>
+<h2 id="changing-maps"><a class="header" href="#changing-maps">Changing Maps</a></h2>
+<p><strong>Requires a role with the following permission: <a href="players/">Change Map</a></strong></p>
+<ol>
+<li>Click the <em>Map</em> tab.</li>
+<li>Head over to the Edit Game menu while playing.</li>
+<li>Select your desired map and click <em>Save and Change Map</em>.</li>
+</ol>
+<pre><code class="language-admonish warning">Any unsaved builds are lost if you change the map.
+</code></pre>
+<h2 id="advanced-settings"><a class="header" href="#advanced-settings">Advanced Settings</a></h2>
+<p><strong>Requires a role with the following permission: <a href="players/">Edit Server Settings</a></strong></p>
+<h3 id="in-game"><a class="header" href="#in-game">In-Game</a></h3>
+<h3 id="prefab-limits"><a class="header" href="#prefab-limits">Prefab Limits</a></h3>
+<h3 id="selector-limits"><a class="header" href="#selector-limits">Selector Limits</a></h3>
+<h3 id="auto-saving"><a class="header" href="#auto-saving">Auto Saving</a></h3>
+<h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
+<p><strong>Requires a role with the following permission: <a href="players/">Edit Server Roles</a></strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="roles-and-permissions"><a class="header" href="#roles-and-permissions">Roles and Permissions</a></h1>
+<p>Placeholder</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="catalog"><a class="header" href="#catalog">Catalog</a></h1>
+<p>The catalog is where you get your bricks and weapons from.</p>
+<p>Currently, you are able to browse:</p>
+<ol>
+<li><a href="players/">Bricks</a></li>
+<li><a href="players/">Weapons</a></li>
+</ol>
+<h2 id="browsing-the-catalog"><a class="header" href="#browsing-the-catalog">Browsing the Catalog</a></h2>
+<p>To access the Catalog, simply press <kbd>B</kbd>. You can switch between bricks and weapons on the top bar.</p>
+<p><img src="players/../assets/players/catalog/catalog_bricks.png" alt="Catalog with Bricks" /></p>
+<p><img src="players/../assets/players/catalog/catalog_items.png" alt="Catalog with Items" /></p>
+<p>To get an item from the Catalog, simply click one of the items you want <em>or</em> click and drag the item to the <a href="players/quickbar.html">Quickbar</a>. This will put it in the Quickbar.</p>
+<p>To remove items from your Quickbar, right click on them <em>or</em> click and drag the item back to the Catalog.</p>
+<p>To add a brick to the Quickbar as a <strong>temporary brick</strong>, middle click the brick you want in the Catalog. <strong>This exits the Catalog.</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="presets"><a class="header" href="#presets">Presets</a></h1>
+<p>In Brickadia, presets are everywhere.</p>
+<p>Presets can be saved for:</p>
+<ul>
+<li>Avatars</li>
+<li>Palettes</li>
+<li>Components</li>
+<li>Minigames</li>
+<li>Environment configurations</li>
+<li>All settings</li>
+</ul>
+<h2 id="presets-menu"><a class="header" href="#presets-menu">Presets Menu</a></h2>
+<p>The Presets menu is accessible at any given point when it's possible to save configurations as presets.</p>
+<p>Click any preset to load it.</p>
+<p><img src="players/../assets/players/presets/presets_menu.png" alt="Preset Menu" /></p>
+<p>When you hover over a preset in this menu, 3 options will show.</p>
+<p><img src="players/../assets/players/presets/presets_menu_hovered_over.png" alt="Preset Menu" /></p>
+<p>Here's a list of the options (in order):</p>
+<ol>
+<li>Rename - Click this button to rename the preset.</li>
+<li>Overwrite - Click this yellow button to overwrite the preset with your current configuration.</li>
+<li>Delete - Click this red button to remove the preset.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="quickbar"><a class="header" href="#quickbar">Quickbar</a></h1>
+<p>The Quickbar is where you equip your current brick or item.</p>
+<h2 id="how-to-use-the-quickbar"><a class="header" href="#how-to-use-the-quickbar">How to use the Quickbar</a></h2>
+<p>To add an item to your Quickbar, browse the <a href="players/catalog.html">Catalog</a> and from there, click any item you want to put it in the Quickbar.</p>
+<p>To remove an item from your Quickbar, right-click the item in the Quickbar.</p>
+<p>To switch the Quickbar mode in gameplay, press <kbd>Ctrl</kbd><kbd>Q</kbd> to switch between items and bricks.</p>
+<p>The quick bar in brick mode:</p>
+<p><img src="players/../assets/players/quickbar/brick_quickbar.png" alt="Brick Quickbar" /></p>
+<p>The Quickbar in item mode:</p>
+<p><img src="players/../assets/players/quickbar/item_quickbar.png" alt="Item Quickbar" /></p>
+<p>This can be configured through <a href="players/">Minigames</a>.</p>
+<h2 id="default-keybindings"><a class="header" href="#default-keybindings">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Equip Slot 1-10</td><td><kbd>1</kbd> to <kbd>0</kbd></td><td></td></tr>
+<tr><td>Next Slot</td><td>Mouse Wheel Up</td><td></td></tr>
+<tr><td>Previous Slot</td><td>Mouse Wheel Down</td><td></td></tr>
+<tr><td>Switch Mode</td><td><kbd>Ctrl</kbd><kbd>Q</kbd></td><td>Switches the Quickbar between bricks and items.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="building-tools"><a class="header" href="#building-tools">Building: Tools</a></h1>
+<p>In Brickadia, there are several types of tools you can use to enhance your building experience. Currently, there are a
+total of 7 building tools in the game. The most prominent ones are the Placer, Painter and Hammer.</p>
+<h2 id="list-of-tools"><a class="header" href="#list-of-tools">List of Tools</a></h2>
+<p>This is a <em>summary</em> of these tools, to view the full functionalities, <strong>please refer to the building tools' own pages</strong>.</p>
+<ol>
+<li>
+<p><a href="builders/tools/placer/placer.html">Placer</a> <kbd>Q</kbd>
+: Place your bricks precisely.</p>
+</li>
+<li>
+<p><a href="builders/tools/painter/painter.html">Painter</a> <kbd>E</kbd>
+: Change the material and color of your bricks.</p>
+</li>
+<li>
+<p><a href="builders/tools/hammer/hammer.html">Hammer</a> <kbd>X</kbd>
+: Delete your bricks individually or view ownership of a brick.</p>
+</li>
+<li>
+<p><a href="builders/tools/resizer/resizer.html">Resizer</a> <kbd>M</kbd>
+: Resize a brick or get its size.</p>
+</li>
+<li>
+<p><a href="builders/tools/selector/selector.html">Selector</a>
+: Select multiple bricks at once for common operations like deletion or duplication.</p>
+</li>
+<li>
+<p><a href="builders/tools/applicator/applicator.html">Applicator</a>
+: Configure a brick's visibility, collision channels and apply functionality to your creations with Components.</p>
+</li>
+<li>
+<p><a href="builders/tools/outliner/outliner.html">Outliner</a>
+: Can only create circle guides as of now.</p>
+</li>
+</ol>
+<h2 id="tool-pie-menu"><a class="header" href="#tool-pie-menu">Tool Pie Menu</a></h2>
+<p><img src="builders/tools/tool_wheel.png" alt="Tool Wheel" /></p>
+<p>To equip a tool from the Tool Pie Menu, hold the <kbd>G</kbd> key to open the menu. Hover over the tool you want and release the <kbd>G</kbd> key.</p>
+<p>Alternatively, you can also unequip or change tools through this menu.</p>
+<h2 id="default-key-binds"><a class="header" href="#default-key-binds">Default Key Binds</a></h2>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">Action</th><th style="text-align: left">Keybinding</th></tr></thead><tbody>
+<tr><td style="text-align: left">Open Tool Pie Menu</td><td style="text-align: left">Hold <kbd>G</kbd></td></tr>
+<tr><td style="text-align: left">Equip Placer</td><td style="text-align: left"><kbd>Q</kbd></td></tr>
+<tr><td style="text-align: left">Equip Painter</td><td style="text-align: left"><kbd>E</kbd></td></tr>
+<tr><td style="text-align: left">Equip Hammer</td><td style="text-align: left"><kbd>X</kbd></td></tr>
+<tr><td style="text-align: left">Equip Resizer</td><td style="text-align: left"><kbd>M</kbd></td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-admonish note">Selector, Applicator do not have any keybindings by default. Outliner keybind does not exist yet.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="placer"><a class="header" href="#placer">Placer</a></h1>
+<p><img src="builders/tools/placer/placer.png" alt="Placer" /></p>
+<p>The Placer is a tool for placing bricks.</p>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<p>Grab some bricks from the Catalog (default key is <kbd>B</kbd>). Once you've done that, you can just simply click to place a brick!</p>
+<p>The placer also allows row dragging in a direction. Just <strong>hold left click</strong> and drag to a direction that you want to place bricks in a row.</p>
+<h2 id="temporary-bricks"><a class="header" href="#temporary-bricks">Temporary bricks</a></h2>
+<p>You can copy bricks by middle clicking. This allows you to place the brick like any other.</p>
+<p>Copying can be done in two ways:</p>
+<ul>
+<li>As a temporary brick. The copied brick type will remain selected in the quickbar until you switch to something else.</li>
+<li>As a new quickbar brick (hold <kbd>Ctrl</kbd>). The copied brick type will be added to the end of your quickbar, like bricks chosen from within the catalog are.</li>
+</ul>
+<h2 id="default-keybindings-1"><a class="header" href="#default-keybindings-1">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Add Brick as Temp Brick</td><td>Middle Click</td><td>Copies a brick and puts it into your Quickbar as a temporary brick.</td></tr>
+<tr><td>Add Brick</td><td><kbd>Ctrl</kbd> Middle Click</td><td>Copies a brick and puts it into your Quickbar.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="painter"><a class="header" href="#painter">Painter</a></h1>
+<p><img src="builders/tools/painter/painter.png" alt="Painter" /></p>
+<p>The Painter is a tool for painting bricks.</p>
+<h2 id="getting-started-1"><a class="header" href="#getting-started-1">Getting Started</a></h2>
+<p>To paint a brick, left click. You can hold left click to continue painting across bricks. You can paint both colors and materials.</p>
+<p>To copy a color from a brick, use middle click on that brick.</p>
+<p>This is the menu for the paint tool.</p>
+<p><img src="builders/tools/painter/paint_menu.png" alt="Paint Menu" /></p>
+<h2 id="colors-and-materials"><a class="header" href="#colors-and-materials">Colors and Materials</a></h2>
+<p>The colors that you are able to paint with can be changed in the <a href="builders/tools/painter/">Server Settings</a> using a palette <a href="builders/tools/painter/../../../players/presets.html">Preset</a>.</p>
+<p>Available materials include:</p>
+<ul>
+<li>Plastic (no slider)</li>
+<li>Glass</li>
+<li>Glow</li>
+<li>Metallic</li>
+<li>Hologram</li>
+</ul>
+<h2 id="default-keybindings-2"><a class="header" href="#default-keybindings-2">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Functionality</th></tr></thead><tbody>
+<tr><td>Copy Color</td><td>Middle Click</td><td>Copies the color of a brick.</td></tr>
+<tr><td>Scroll through Palette</td><td>Mouse wheel (vertically), <kbd>E</kbd> (horizontally)</td><td>Scrolls through the palette to select a color.</td></tr>
+<tr><td>Change Material</td><td><kbd>Ctrl</kbd> <kbd>E</kbd></td><td>Switch between scrolling through the colors or materials palette.</td></tr>
+<tr><td>Change Material Slider</td><td><kbd>Ctrl</kbd> Mouse Wheel</td><td>Changes the material slider while scrolling through the materials palette.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="hammer"><a class="header" href="#hammer">Hammer</a></h1>
+<p><img src="builders/tools/hammer/hammer.png" alt="Hammer" /></p>
+<p>The Hammer is a tool for removing bricks.</p>
+<h2 id="getting-started-2"><a class="header" href="#getting-started-2">Getting Started</a></h2>
+<p>The Hammer is simple to use. <strong>Left click</strong> on the brick you want to remove. You can <strong>hold left click</strong> to remove bricks consecutively. It can also hit players.</p>
+<h2 id="ownership-checking"><a class="header" href="#ownership-checking">Ownership Checking</a></h2>
+<p>To check ownership of a brick with the hammer, you can press <strong>middle click</strong> on a brick.</p>
+<p><img src="builders/tools/hammer/hammer_ownership.png" alt="Hammer Ownership" /></p>
+<h2 id="default-keybindings-3"><a class="header" href="#default-keybindings-3">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Functionality</th></tr></thead><tbody>
+<tr><td>Get Ownership</td><td>Middle Click</td><td>Gets ownership of a brick.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="resizer"><a class="header" href="#resizer">Resizer</a></h1>
+<p>The Resizer is a tool for resizing bricks.</p>
+<p><img src="builders/tools/resizer/resizer.png" alt="Resizer" /></p>
+<h2 id="getting-started-3"><a class="header" href="#getting-started-3">Getting Started</a></h2>
+<p>To resize a brick, simply click on a brick that you want to resize. Once you have done that, you can drag the handles to resize the brick in directions.</p>
+<p><img src="builders/tools/resizer/resizer_display.png" alt="Resizer Tool" /></p>
+<h2 id="brick-size-checking"><a class="header" href="#brick-size-checking">Brick Size Checking</a></h2>
+<p>To check the size of a brick with the resizer, you can press <strong>middle click</strong> on a brick.</p>
+<p><img src="builders/tools/resizer/resizer_brick_size.png" alt="Resizer Brick Size" /></p>
+<h2 id="default-keybindings-4"><a class="header" href="#default-keybindings-4">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th></tr></thead><tbody>
+<tr><td>Get Brick Size</td><td>Middle Click</td></tr>
+<tr><td>Resize Brick to Maximum</td><td><kbd>Ctrl</kbd> Middle Click</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="selector"><a class="header" href="#selector">Selector</a></h1>
+<p><img src="builders/tools/selector/selector.png" alt="Selector" /></p>
+<p>The Selector is a tool for selecting many bricks at once. Currently, you can delete many bricks, cut brick selections, copy and paste brick selections from this tool.</p>
+<h2 id="getting-started-4"><a class="header" href="#getting-started-4">Getting Started</a></h2>
+<p>There are a few ways to select bricks with this tool. This includes:</p>
+<ul>
+<li>Clicking a brick with the tool and resizing the selection box with the handles.</li>
+<li>Clicking a brick with the tool, and then <kbd>Ctrl</kbd>-clicking another brick to expand the selection box.</li>
+</ul>
+<p>For reference, this is what the selection box and its adjustment handles looks like.</p>
+<p><img src="builders/tools/selector/selector_box.png" alt="Selector Box" /></p>
+<p>You can also adjust the selection box more precisely (under the size of a stud) by holding the <strong>Fine Selection</strong> keybinding.</p>
+<h2 id="deleting-cutting-copying-and-pasting-selections"><a class="header" href="#deleting-cutting-copying-and-pasting-selections">Deleting, Cutting, Copying and Pasting Selections</a></h2>
+<p>These actions with the selector all use the standard PC keybindings, although there's an additional keybinding to retain ownership when pasting bricks called <strong>Advanced Paste Selection</strong>.</p>
+<h2 id="default-keybindings-5"><a class="header" href="#default-keybindings-5">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Copy Selection</td><td><kbd>Ctrl</kbd><kbd>C</kbd></td><td></td></tr>
+<tr><td>Paste Selection</td><td><kbd>Ctrl</kbd><kbd>V</kbd></td><td>Switches to the Placer tool.</td></tr>
+<tr><td>Advanced Paste Selection</td><td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd></td><td>Keeps the ownership of the selection intact.</td></tr>
+<tr><td>Cut Selection</td><td><kbd>Ctrl</kbd><kbd>X</kbd></td><td></td></tr>
+<tr><td>Delete Selection</td><td><kbd>Delete</kbd></td><td></td></tr>
+<tr><td>Fine Selection</td><td>Hold <kbd>Ctrl</kbd></td><td>Allows you to resize the selection box in microbrick increments.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="applicator"><a class="header" href="#applicator">Applicator</a></h1>
+<p><img src="builders/tools/applicator/applicator.png" alt="Applicator" /></p>
+<p>The Applicator is a tool for applying <a href="builders/tools/applicator/">Components</a> to bricks. The tool is compatible with <a href="builders/tools/applicator/../../../players/presets.html">Presets</a>.</p>
+<p>The current default component list includes:</p>
+<ul>
+<li><a href="builders/tools/applicator/../../components/spot_light/spot_light.html">Spot Light</a></li>
+<li><a href="builders/tools/applicator/../../components/point_light/point_light.html">Point Light</a></li>
+<li><a href="builders/tools/applicator/../../components/audio/audio.html">Audio</a></li>
+<li><a href="builders/tools/applicator/../../components/item_spawn/item_spawn.html">Item Spawn</a></li>
+</ul>
+<h2 id="getting-started-5"><a class="header" href="#getting-started-5">Getting Started</a></h2>
+<p>To get started, point at a brick of your choosing and left click with the Applicator tool equipped. The Applicator menu will appear.</p>
+<p><img src="builders/tools/applicator/applicator_menu.png" alt="applicator_menu.png" /></p>
+<h2 id="brick-properties"><a class="header" href="#brick-properties">Brick Properties</a></h2>
+<h3 id="visibility"><a class="header" href="#visibility">Visibility</a></h3>
+<p>The visibility of a brick can be toggled. Don't worry about not being able to see invisible bricks while editing - <a href="builders/tools/applicator/../../guides/guides.html">all invisible bricks are shown through an effect.</a></p>
+<h3 id="collision"><a class="header" href="#collision">Collision</a></h3>
+<p>Collision can be toggled on individual bricks. There are three collision channels:</p>
+<ul>
+<li><img src="builders/tools/applicator/applicator_player_collision.png" alt="applicator_player_collision.png" /> <strong>Player collision</strong></li>
+<li><img src="builders/tools/applicator/applicator_projectile_collision.png" alt="applicator_projectile_collision.png" /> <strong>Projectile collision</strong>: Bullets, rockets</li>
+<li><img src="builders/tools/applicator/applicator_interact_collision.png" alt="applicator_interact_collision.png" /> <strong>Interact collision</strong>: Clicking</li>
+</ul>
+<h2 id="components"><a class="header" href="#components">Components</a></h2>
+<p>You can add new components, delete existing components or edit the components of a brick.</p>
+<pre><code class="language-admonish note">There can only be one of each component type. For example, you cannot have two Spot Lights per brick at once. You must place an additional brick for that.
+</code></pre>
+<h2 id="duplication"><a class="header" href="#duplication">Duplication</a></h2>
+<p>When outside of the Applicator menu, you can <kbd>Ctrl</kbd>-<kbd>C</kbd> on a brick to copy its properties and components. Once you have done that, you can <kbd>Ctrl</kbd>-<kbd>V</kbd> to paste those properties and components on other bricks.</p>
+<h2 id="probing"><a class="header" href="#probing">Probing</a></h2>
+<p>The Applicator can also let you view existing components of a brick outside the Applicator menu, as seen in the example below.</p>
+<p><img src="builders/tools/applicator/applicator_probe.png" alt="applicator_probe.png" /></p>
+<h2 id="default-keybindings-6"><a class="header" href="#default-keybindings-6">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th></tr></thead><tbody>
+<tr><td>Copy Properties &amp; Components</td><td><kbd>Ctrl</kbd>-<kbd>C</kbd></td></tr>
+<tr><td>Paste Properties &amp; Components</td><td><kbd>Ctrl</kbd>-<kbd>V</kbd></td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="outliner"><a class="header" href="#outliner">Outliner</a></h1>
+<p><img src="builders/tools/outliner/outliner.png" alt="Outline" /></p>
+<p>The Outliner can currently only make circle guides.</p>
+<h2 id="getting-started-6"><a class="header" href="#getting-started-6">Getting Started</a></h2>
+<p>To use the Outliner, simply click and drag to generate a circle. To remove the circle, press <strong>Delete</strong> while equipping the Outliner.</p>
+<p>To resize the circle, simply drag the top handle. To move the origin of the circle, simply drag the center of the handle.</p>
+<p><img src="builders/tools/outliner/outliner_circle.png" alt="Outliner Circle" /></p>
+<h2 id="default-keybindings-7"><a class="header" href="#default-keybindings-7">Default Keybindings</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keybinding</th><th>Functionality</th></tr></thead><tbody>
+<tr><td>Delete Circle</td><td><kbd>Delete</td><td>Removes the circle guide.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="building-guides"><a class="header" href="#building-guides">Building: Guides</a></h1>
+<h2 id="grid"><a class="header" href="#grid">Grid</a></h2>
+<h3 id="grid-guide"><a class="header" href="#grid-guide">Grid Guide</a></h3>
+<p><img src="builders/guides/./guides_grid.gif" alt="Grid Guide" /></p>
+<p>The visual grid serves as a reference of alignment. It adapts to the current grid size you're on. You can customize the transparency and color of it in the <a href="builders/guides/">General Options</a>.</p>
+<pre><code class="language-admonish tip">Don't want the visual grid? Setting the transparency of the grid to 0% will turn it invisible.
+
+![Invisible grid settings](guides_invisible_grid_settings.png)
+</code></pre>
+<h3 id="grid-size"><a class="header" href="#grid-size">Grid Size</a></h3>
+<p>You can change between grid sizes using <kbd>Num -</kbd>, except for the Brick grid size, which is only available through <kbd>Alt</kbd>.</p>
+<p>Plate</p>
+<p>: Dimensions of a 1x1f plate</p>
+<p>1/2</p>
+<p>: Half of a 1x1 plate, height is still the same as a 1x1f plate</p>
+<p>1/5</p>
+<p>: 2x microbrick size, half of a 1x1f plate's height</p>
+<p>1/10</p>
+<p>: Half of a 2x microbrick, most granular possible grid size</p>
+<p>Brick (<kbd>Alt</kbd> only)</p>
+<p>: The grid automatically adjusts to the size of your current brick.</p>
+<h2 id="invisible-brick-indicator"><a class="header" href="#invisible-brick-indicator">Invisible Brick Indicator</a></h2>
+<p>When you have a building tool equipped, the game will show all invisible bricks with a half-opaque effect.</p>
+<p><img src="builders/guides/./guides_invisible_effect.gif" alt="Invisible" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-4-components"><a class="header" href="#chapter-4-components">Chapter 4: Components</a></h1>
+<p>In Brickadia, components are very important for enhancing your builds. In fact, there are many of them placed throughout builds!</p>
+<p>Here's a summary of each component and what each one does:</p>
+<ol>
+<li><a href="builders/components/spot_light/spot_light.html">Spot Light</a> - Places a rotatable and adjustable spotlight.</li>
+<li><a href="builders/components/point_light/point_light.html">Point Light</a> - Places an adjustable point light.</li>
+<li><a href="builders/components/audio/audio.html">Audio</a> - Adds sound to a brick.</li>
+<li><a href="builders/components/item_spawn/item_spawn.html">Item Spawn</a> - Spawns items on a brick.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="spot-light"><a class="header" href="#spot-light">Spot Light</a></h1>
+<p><img src="builders/components/spot_light/spot_light.png" alt="Icon" /></p>
+<p><img src="builders/components/spot_light/spot_light_example.png" alt="Spot Light Example" /></p>
+<p>This component adds a spotlight to a brick.</p>
+<p><img src="builders/components/spot_light/spot_light_menu.png" alt="Edit Menu" /></p>
+<h2 id="component-settings"><a class="header" href="#component-settings">Component Settings</a></h2>
+<h3 id="basic"><a class="header" href="#basic">Basic</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Input</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Brightness</td><td>Number (lumen)</td><td></td></tr>
+<tr><td>Radius</td><td>Number (studs)</td><td></td></tr>
+<tr><td>Sync Brick Color</td><td>Bool</td><td>If true, uses the brick's color and disables "Custom Color".</td></tr>
+<tr><td>Custom Color</td><td>Color</td><td>See <a href="builders/components/spot_light/">Color Panels</a> for more information.</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-admonish warning">Overlapping spotlights can cause performance issues on lower-end hardware.
+</code></pre>
+<h3 id="advanced"><a class="header" href="#advanced">Advanced</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Input</th></tr></thead><tbody>
+<tr><td>Cast Shadows</td><td>Bool</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-admonish warning">Shadows can cause significant performance issues especially on lower-end hardware.
+</code></pre>
+<pre><code class="language-admonish tip">If a light's shadows aren't contributing to a scene enough, disable them to save on performance.
+</code></pre>
+<h3 id="spot-light-1"><a class="header" href="#spot-light-1">Spot Light</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Property</th><th>Input</th></tr></thead><tbody>
+<tr><td>Rotation</td><td>X, Y, Z angles</td></tr>
+<tr><td>Inner Cone Angle</td><td>Angle</td></tr>
+<tr><td>Outer Cone Angle</td><td>Angle</td></tr>
+</tbody></table>
+</div>
+<pre><code class="language-admonish tip">Want a sharp appearance on a spot light? Set the Inner Cone Angle higher than the Outer Cone Angle.
+</code></pre>
+<h2 id="tips-for-this-component"><a class="header" href="#tips-for-this-component">Tips for this Component</a></h2>
+<ul>
+<li>Spot lights rotate with the placer's ghost preview, so their <em>Rotation</em> settings aren't affected in any way.</li>
+<li>Do not overlap spot lights too much as this can cause performance issues.</li>
+<li>If the <em>Inner Cone Angle</em> is higher than the <em>Outer Cone Angle</em>, the spotlight will produce a result like this:</li>
+</ul>
+<p><img src="builders/components/spot_light/spot_light_sharp.png" alt="Sharp Spot Light" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="point-light"><a class="header" href="#point-light">Point Light</a></h1>
+<p><img src="builders/components/point_light/point_light.png" alt="Icon" /></p>
+<p><img src="builders/components/point_light/point_light_example.png" alt="Point Light Example" /></p>
+<p>This component adds a point light to a brick.</p>
+<p><img src="builders/components/point_light/point_light_menu.png" alt="Edit Menu" /></p>
+<h2 id="tips-for-this-component-1"><a class="header" href="#tips-for-this-component-1">Tips for this Component</a></h2>
+<ul>
+<li>You can use small radius point lights to light up signs, glowing crystals, neon lights, etc.</li>
+<li>Point lights without shadows can cause undesired light leaks. It is advisable to turn down the <em>light radius</em> when this happens.</li>
+</ul>
+<p><img src="builders/components/point_light/point_light_leak.png" alt="Light Leak" /></p>
+<ul>
+<li>Do not overlap point lights too much as this can cause performance issues.</li>
+<li>Point light shadows are very intensive and can impact performance massively in large amounts, so use them carefully.</li>
+<li>It is important to use the <em>Cast Shadows</em> option sparsely or when it's necessary. Misuse of this can lead to your point lights casting abnormal shadows like this.</li>
+</ul>
+<p><img src="builders/components/point_light/point_light_shadow_example_1.png" alt="Shadow Example" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="audio"><a class="header" href="#audio">Audio</a></h1>
+<p><img src="builders/components/audio/audio.png" alt="Icon" /></p>
+<p>This component can add sounds or music to bricks.</p>
+<p><img src="builders/components/audio/audio_menu.png" alt="Edit Menu" /></p>
+<h2 id="tips-for-this-component-2"><a class="header" href="#tips-for-this-component-2">Tips for this Component</a></h2>
+<ul>
+<li>It is <strong>NOT</strong> recommended to use this component as a way to add loud sounds in public servers unless necessary, as this may disturb players or lead to server bans.</li>
+<li>You can use the <em>Pitch Multiplier</em> as a way to create a variety of sounds.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="item-spawn"><a class="header" href="#item-spawn">Item Spawn</a></h1>
+<p><img src="builders/components/item_spawn/item_spawn.png" alt="Icon" /></p>
+<p><img src="builders/components/item_spawn/item_spawn_example.png" alt="Item Spawn Example" /></p>
+<p>This component can spawn weapons and adjust their pick-up appearance. Compatible with <a href="builders/components/item_spawn/">Minigames</a>.</p>
+<p><img src="builders/components/item_spawn/item_spawn_menu.png" alt="Edit Menu" /></p>
+<h2 id="tips-for-this-component-3"><a class="header" href="#tips-for-this-component-3">Tips for this Component</a></h2>
+<ul>
+<li>Item spawns can be used as a way to decorate your build using the <em>rotation and offset</em> settings. Here is an example:</li>
+</ul>
+<p><img src="builders/components/item_spawn/item_spawn_decor_example.png" alt="Item Spawn Decoration" /></p>
+<ul>
+<li>Item spawns can be used in deathmatch maps as a way to add health pick-ups.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="users"><a class="header" href="#users">Users</a></h1>
+<p>If you encounter any of these specimens, you may need to exercise caution.</p>
+<h2 id="mizuno"><a class="header" href="#mizuno">mizuno</a></h2>
+<p>Occasionally, you will see a player named mizuno. If you see him, leave the game, as you may already be in danger.</p>
+<h2 id="rlcbm"><a class="header" href="#rlcbm">rlcbm</a></h2>
+<p>Please be advised that you will not be left unaware of the time.</p>
+<h2 id="zeblote"><a class="header" href="#zeblote">Zeblote</a></h2>
+<p>A small percentile of users report sightings of a mysterious entity known only as Zeblote. Reports describe him judging the uses of bricks in the player's server, often deeming them terrible. Many users report symptoms of severe headaches and nausea after being informed of this. Please adjust your use of bricks accordingly.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
